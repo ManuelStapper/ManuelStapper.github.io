@@ -15,7 +15,7 @@ group :jekyll_plugins do
     gem 'jemoji'
     gem 'unicode_utils'
     gem 'webrick'
-    gem 'wdm', '>= 0.1.0'
+    gem 'listen'
 end
 
 group :other_plugins do
