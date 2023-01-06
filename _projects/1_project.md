@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MFit.jl
+title: RobustMFit.jl
 description: Robust Fitting of Distributions
 img: assets/img/MFit.png
 importance: 1
