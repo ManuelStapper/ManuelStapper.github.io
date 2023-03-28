@@ -4,4 +4,4 @@ github_users:
 github_repos:
   - ManuelStapper/RandomVariables.jl
   - ManuelStapper/CountTimeSeries.jl
-  - ManuelStapper/MFit.jl
+  - ManuelStapper/RobustMFit.jl
