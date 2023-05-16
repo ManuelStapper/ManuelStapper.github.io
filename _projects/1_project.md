@@ -8,3 +8,7 @@ category: Research
 ---
 
 🚧 This page is under construction 🚧
+
+<!-- <p align = "center">
+    <img src = "Plots/Project1/Plot1.svg" width="50%">
+<\p> -->
