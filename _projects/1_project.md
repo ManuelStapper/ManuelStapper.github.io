@@ -17,7 +17,7 @@ category: Research
 
 In practice, we often come across unusual observations in a sample. Robust statistics offers great tools to ignore or limit the influence of such observations on an estimate. This project deals with a famous class of robust estimators: M-estimators. Although initially developed for location estimation without distributional assumption, we limit to the case where a distribution is assumed and especially focus on the case of skewed or in more general terms asymmetric distributions. Standard M-estimation techniques frequently yield biased estimates that need to be corrected. In the following, I am going to give you an overview of a Julia package that was developed to fit distributions to i.i.d. samples using M-estimators. Two bias correction approaches are included: an established method and a novel appraoch.
 
-To describe the bias corrections, let us consider a simple random sample $`X_1, ..., X_n`$. The expectation of $`X_i`$ can be estimated by minimizing
+To describe the bias corrections, let us consider a simple random sample $X_1, ..., X_n$. The expectation of $X_i$ can be estimated by minimizing
 $$
     \sum_{i = 1}^n \rho\left(\frac{X_i - \mu}{\sigma}\right)
 $$with respect to $\mu$, where $\sigma$ is the known or robustly estimated standard deviation of $X_i$. The function $\rho$ is a general loss function that attains its minimum at zero. Taking the derivative transforms the optimiztsation problem into the estimation equation
@@ -26,7 +26,7 @@ $$
 $$where $\psi$ is the derivative of $\rho$. Whenever $\psi$ is bounded in absolute value, the resulting estimator is robust. Inserting $w(z) = \psi(z)/z$, we can further rewrite the estimation equation as fixed point equation
 $$
     \mu = \frac{\sum_{i = 1}^n w(Z_i)X_i}{\sum_{i = 1}^n w(Z_i)}
-$$with $`Z_i = \frac{X_i - \mu}{\sigma}`$. In robust statistics, we typically select a loss function that depends on the choice of a tuning constant that controls the trade-off between robustness and efficiency.
+$$with $Z_i = \frac{X_i - \mu}{\sigma}$. In robust statistics, we typically select a loss function that depends on the choice of a tuning constant that controls the trade-off between robustness and efficiency.
 
 <details>
     <summary><font size = "+2"> Established Bias Correction</font></summary>
