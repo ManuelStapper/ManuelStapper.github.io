@@ -17,7 +17,7 @@ category: Research
 
 In practice, we often come across unusual observations in a sample. Robust statistics offers great tools to ignore or limit the influence of such observations on an estimate. This project deals with a famous class of robust estimators: M-estimators. Although initially developed for location estimation without distributional assumption, we limit to the case where a distribution is assumed and especially focus on the case of skewed or in more general terms asymmetric distributions. Standard M-estimation techniques frequently yield biased estimates that need to be corrected. In the following, I am going to give you an overview of a Julia package that was developed to fit distributions to i.i.d. samples using M-estimators. Two bias correction approaches are included: an established method and a novel appraoch.
 
-To describe the bias corrections, let us consider a simple random sample $X_1, ..., X_n$. The expectation of $X_i$ can be estimated by minimizing
+To describe the bias corrections, let us consider a simple random sample $`X_1, ..., X_n`$. The expectation of $`X_i`$ can be estimated by minimizing
 $$
     \sum_{i = 1}^n \rho\left(\frac{X_i - \mu}{\sigma}\right)
 $$with respect to $\mu$, where $\sigma$ is the known or robustly estimated standard deviation of $X_i$. The function $\rho$ is a general loss function that attains its minimum at zero. Taking the derivative transforms the optimiztsation problem into the estimation equation
@@ -26,7 +26,7 @@ $$
 $$where $\psi$ is the derivative of $\rho$. Whenever $\psi$ is bounded in absolute value, the resulting estimator is robust. Inserting $w(z) = \psi(z)/z$, we can further rewrite the estimation equation as fixed point equation
 $$
     \mu = \frac{\sum_{i = 1}^n w(Z_i)X_i}{\sum_{i = 1}^n w(Z_i)}
-$$with $Z_i = \frac{X_i - \mu}{\sigma}$. In robust statistics, we typically select a loss function that depends on the choice of a tuning constant that controls the trade-off between robustness and efficiency.
+$$with $`Z_i = \frac{X_i - \mu}{\sigma}`$. In robust statistics, we typically select a loss function that depends on the choice of a tuning constant that controls the trade-off between robustness and efficiency.
 
 <details>
     <summary><font size = "+2"> Established Bias Correction</font></summary>
@@ -52,7 +52,7 @@ $$and can solve for $p$ directly. We will refer to the approach as the "direct a
 
 Both example distributions are parametrized by one parameter. If we want to fit a distribution with a parameter vector $\theta\in\mathbb{R}^p$, we can extend the estimation equation to higher powers of $X_i$, i.e. $X_i$, $X_i^2$, ... $X_i^p$. The $p$ estimation equations then become
 $$
-    \sum_{i = 1}^n \sum_{i = 1}^n \psi\left(\frac{X_i^j - \mu_j(\theta)}{\sigma_j(\theta)}\right) - c_{\theta, j} = 0
+    \sum_{i = 1}^n \psi\left(\frac{X_i^j - \mu_j(\theta)}{\sigma_j(\theta)}\right) - c_{\theta, j} = 0
 $$for $j = 1, ..., p$ where $\mu_j(\theta)$ is the expectation of $X_i^j$ and $\sigma_j(\theta)$ its standard deviation. The choice of the function $\psi$ and its tuning constant may be selected differently for the single estimation equations.
 </details>
 
