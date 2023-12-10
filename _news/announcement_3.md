@@ -4,4 +4,4 @@ date: 2023-11-08
 inline: true
 ---
 
-PhD Thesis defended. 🥳
+PhD thesis defended. 🥳
