@@ -1,7 +1,0 @@
-github_users:
-  - ManuelStapper
-
-github_repos:
-  - ManuelStapper/RandomVariables.jl
-  - ManuelStapper/CountTimeSeries.jl
-  - ManuelStapper/RobustMFit.jl
