@@ -2,7 +2,6 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href="assets/pdf/CVStapper.pdf">CV</a>
 
 
 profile:
